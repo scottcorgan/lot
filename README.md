@@ -1,4 +1,4 @@
-# into
+# during
 
 Chainable async utilities for collections and arrays.
 
@@ -11,17 +11,17 @@ have a ` success ` and ` error ` method passed to it as arguments
 ## install
 
 ```
-npm install into --save
+npm install during --save
 ```
 
 ## Usage
 
 ```js
-var into = require('into');
+var during = require('during');
 
 var list = [1, 2, 3];
 
-into(list)
+during(list)
   .filter(function (item, next) {
     next(null, item < 3);
   })

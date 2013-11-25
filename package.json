@@ -1,6 +1,6 @@
 {
   "name": "during",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Chainable async utilities for collections and arrays",
   "main": "index.js",
   "scripts": {
