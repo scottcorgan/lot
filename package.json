@@ -1,0 +1,31 @@
+{
+  "name": "during",
+  "version": "0.2.0",
+  "description": "Chainable async utilities for collections and arrays",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottcorgan/during.git"
+  },
+  "keywords": [
+    "chain",
+    "async",
+    "collection",
+    "filter"
+  ],
+  "author": "Scott Corgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottcorgan/during/issues"
+  },
+  "dependencies": {
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "expect.js": "~0.2.0"
+  }
+}
