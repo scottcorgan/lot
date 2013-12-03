@@ -1,4 +1,4 @@
-# during
+# lot
 
 Chainable async utilities for collections and arrays.
 
@@ -11,17 +11,17 @@ have a ` success ` and ` error ` method passed to it as arguments
 ## install
 
 ```
-npm install during --save
+npm install lot --save
 ```
 
 ## Usage
 
 ```js
-var during = require('during');
+var lot = require('lot');
 
 var list = [1, 2, 3];
 
-during(list)
+lot(list)
   .filter(function (item, next) {
     next(null, item < 3);
   })

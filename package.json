@@ -1,6 +1,6 @@
 {
-  "name": "during",
-  "version": "0.2.1",
+  "name": "lot",
+  "version": "0.3.0",
   "description": "Chainable async utilities for collections and arrays",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottcorgan/during.git"
+    "url": "https://github.com/scottcorgan/lot.git"
   },
   "keywords": [
     "chain",
@@ -19,7 +19,7 @@
   "author": "Scott Corgan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scottcorgan/during/issues"
+    "url": "https://github.com/scottcorgan/lot/issues"
   },
   "dependencies": {
     "async": "~0.2.9"

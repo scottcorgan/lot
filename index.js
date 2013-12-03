@@ -1,7 +1,7 @@
 var util = require('util');
 var async = require('async');
 
-var During = function (items) {
+var Lot = function (items) {
   var self = this;
   
   this._items = items;
@@ -29,7 +29,7 @@ var During = function (items) {
   });
 };
 
-During.prototype._buildTaskWaterfall = function (tasks) {
+Lot.prototype._buildTaskWaterfall = function (tasks) {
   var self = this;
   
   var waterfallList = [function (next) {
@@ -47,7 +47,7 @@ During.prototype._buildTaskWaterfall = function (tasks) {
   return waterfallList;
 };
 
-During.prototype._addFn = function (type, fn, args) {
+Lot.prototype._addFn = function (type, fn, args) {
   this._fns.push({
     type: type,
     args: args,
@@ -55,13 +55,13 @@ During.prototype._addFn = function (type, fn, args) {
   });
 };
 
-During.prototype.run = function () {
+Lot.prototype.run = function () {
   var args = Array.prototype.slice.call(arguments, 0);
   var methodName = args.shift();
   this['run_' + methodName].apply(this, args);
 }
 
-During.prototype.then = function (thenCallback, errorCallback) {
+Lot.prototype.then = function (thenCallback, errorCallback) {
   this.onComplete = thenCallback;
   this.onError = errorCallback;
 };
@@ -240,7 +240,7 @@ During.prototype.then = function (thenCallback, errorCallback) {
 //
 function addMethod (fn) {
   // Public method
-  During.prototype[fn.name] = function () {
+  Lot.prototype[fn.name] = function () {
     var lastArg = arguments.length -1;
     var filterFn = arguments[lastArg];
     var args = Array.prototype.slice.call(arguments, 0);
@@ -250,7 +250,7 @@ function addMethod (fn) {
   };
   
   // Runner
-  During.prototype['run_' + fn.name] = function (items, args, callback) {
+  Lot.prototype['run_' + fn.name] = function (items, args, callback) {
     if (!util.isArray(items)) items = [items];
     if (!util.isArray(args)) args = [args];
     var filterFn = args.pop();
@@ -282,5 +282,5 @@ function callbackWithErrorHandler (context, callback) {
 
 
 module.exports = function (list) {
-  return new During(list);
+  return new Lot(list);
 };
