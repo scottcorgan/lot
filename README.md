@@ -3,9 +3,9 @@
 Chainable async utilities for collections and arrays.
 
 The backbone of this module is the [async](http://github.com/caolan/async) module. The problem this is trying to solve is easy chaining of these useful functional methods. This module
-also adds a few new methods based off ideas from [lodash](). Lodash is a very useful library, but it doesn't not allow you to perform async iterations.
+also adds a few new methods based off ideas from [lodash](http://github.com/lodash/lodash). Lodash is a very useful library, but it doesn't not allow you to perform async iterations.
 
-At the end of each chain, you can add a ` then ` method which is based off of the [Promises/A+]() spec. It is not a real promise, but allows you to
+At the end of each chain, you can add a ` then ` method which is based off of the [Promises/A+](http://github.com/promises-aplus/promises-spec) spec. It is not a real promise, but allows you to
 have a ` success ` and ` error ` method passed to it as arguments
 
 ## install
